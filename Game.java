@@ -1,6 +1,6 @@
 import java.awt.Canvas;
 import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 import java.awt.image.BufferStrategy;
 
 public class Game extends Canvas implements Runnable {
@@ -13,7 +13,7 @@ public class Game extends Canvas implements Runnable {
 
    //Creates background window size and holds objects by handler
    public Game() {
-     Screen myScreen = Screen(1280, 720, "Deed", this);
+	   Screen myScreen = new Screen(1280, 720, "Deed", this);
       start();
       
       handler = new Handler();
