@@ -10,14 +10,15 @@ public class Game extends Canvas implements Runnable {
    private boolean isRunning = false;
    private Thread thread;
    private Handler handler;
+
    //Creates background window size and holds objects by handler
    public Game() {
-     Screen(1280, 720, "Deed", this);
+     Screen myScreen = Screen(1280, 720, "Deed", this);
       start();
       
       handler = new Handler();
       addKeyListener(new KeyInput(handler));
-      handler.addObject(new Player(425, 745, ID.Player, handler));
+       handler.addObject(new Player(425, 745, ID.Player, handler));
       
    }
 
